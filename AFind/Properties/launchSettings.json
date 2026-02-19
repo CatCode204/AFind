@@ -2,7 +2,7 @@
   "profiles": {
     "AFind": {
       "commandName": "Project",
-      "commandLineArgs": "\"Hello World\""
+      "commandLineArgs": "\"Hello World\" /i /n"
     }
   }
 }

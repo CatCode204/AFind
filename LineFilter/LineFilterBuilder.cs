@@ -20,6 +20,11 @@ namespace LineFilter
 			lineFilter = new LineNumberFilterDecorator(lineFilter, num);
 		}
 
+		public void SetCaseInSensitiveContains(bool isContains,string strToFilter)
+		{
+			lineFilter = isContains ? new ContainsCaseInsensitiveLineFilterDecorator(lineFilter,strToFilter) : new NoContainsCaseInsensitiveLineFilterDecorator(lineFilter,strToFilter);
+		}
+
 		public void Reset()
 		{
 			lineFilter = new NoLineFilter();

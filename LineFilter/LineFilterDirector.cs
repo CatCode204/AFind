@@ -1,4 +1,6 @@
-﻿namespace LineFilter
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace LineFilter
 {
 	public class LineFilterDirector
 	{
@@ -11,7 +13,10 @@
 		public LineFilter Direct(FilterOptions filterOptions)
 		{
 			foreach (var strToFilter in filterOptions.FilterStrings)
-				lineFilterBuilder.SetContains(filterOptions.FilterContains, strToFilter);
+				if (filterOptions.IsCaseSensitive)
+					lineFilterBuilder.SetContains(filterOptions.FilterContains, strToFilter);
+				else
+					lineFilterBuilder.SetCaseInSensitiveContains(filterOptions.FilterContains, strToFilter);
 
 			if (filterOptions.FilterMaxLineNumber > 0)
 				lineFilterBuilder.SetNumberLineToFilter(filterOptions.FilterMaxLineNumber);

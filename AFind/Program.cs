@@ -26,6 +26,7 @@ namespace AFind
             var lineFilterOptions = new FilterOptions();
             lineFilterOptions.FilterContains = options.IsContains;
             lineFilterOptions.FilterStrings.Add(options.StrToFind);
+            lineFilterOptions.IsCaseSensitive = options.IsCaseSensitive;
 
             var lineFilter = lineFilterDirector.Direct(lineFilterOptions);
 

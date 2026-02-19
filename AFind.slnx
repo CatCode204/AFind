@@ -1,3 +1,8 @@
 <Solution>
   <Project Path="AFind/AFind.csproj" />
+  <Project Path="AFindOptions/AFindOptions.csproj" />
+  <Project Path="AFindOptionsTest/AFindOptionsTest.csproj" />
+  <Project Path="LineFilter/LineFilter.csproj" />
+  <Project Path="LinePrinter/LinePrinter.csproj" />
+  <Project Path="LineSource/LineSource.csproj" />
 </Solution>

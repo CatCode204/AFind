@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AFind": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Hello World\""
+    }
+  }
+}
